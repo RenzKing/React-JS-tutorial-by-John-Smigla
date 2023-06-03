@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function Greeting() {
+const Greeting = () => {
   return <h2>My First Component</h2>;
-}
+};
 
-const root = ReactDOM.createRoot(document.querySelector("#root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<Greeting />);
