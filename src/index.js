@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 // const Greeting = () => {
 //   return (
@@ -46,7 +47,7 @@ import ReactDOM from "react-dom/client";
 
 const BookList = () => {
   return (
-    <section>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -58,7 +59,7 @@ const BookList = () => {
 const Book = () => {
   return (
     <>
-      <article>
+      <article className="book">
         <Image />
         <Title />
         <Author />
