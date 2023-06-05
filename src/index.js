@@ -26,20 +26,68 @@ import ReactDOM from "react-dom/client";
 //   );
 // };
 
-const Greeting = () => {
+// const Greeting = () => {
+//   return (
+//     <>
+//       <Person />
+//       <Message />
+//     </>
+//   );
+// };
+
+// const Person = () => <h2>John Doe</h2>;
+// const Message = () => {
+//   return <p>This is my message</p>;
+// };
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(<Greeting />);
+
+const BookList = () => {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+};
+
+const Book = () => {
   return (
     <>
-      <Person />
-      <Message />
+      <article>
+        <Image />
+        <Title />
+        <Author />
+      </article>
     </>
   );
 };
 
-const Person = () => <h2>John Doe</h2>;
-const Message = () => {
-  return <p>This is my message</p>;
+const Image = () => {
+  return (
+    <img
+      src="https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg"
+      alt="JavaScript: The Definitive Guide: Master the World's Most-Used Programming
+      Language"
+    ></img>
+  );
+};
+
+const Title = () => {
+  return (
+    <h2>
+      The Definitive Guide: Master the World's Most-Used Programming Language
+    </h2>
+  );
+};
+
+const Author = () => {
+  return <h4>David Flanagan</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<Greeting />);
+root.render(<BookList />);
