@@ -45,6 +45,11 @@ import "./index.css";
 
 // root.render(<Greeting />);
 
+const author = "David Flanagan";
+const title =
+  "JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language";
+const img = "https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg";
+
 const BookList = () => {
   return (
     <section className="booklist">
@@ -69,21 +74,11 @@ const Book = () => {
 };
 
 const Image = () => {
-  return (
-    <img
-      src="https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg"
-      alt="JavaScript: The Definitive Guide: Master the World's Most-Used Programming
-      Language"
-    ></img>
-  );
+  return <img src={img} alt={title}></img>;
 };
 
 const Title = () => {
-  return (
-    <h2>
-      The Definitive Guide: Master the World's Most-Used Programming Language
-    </h2>
-  );
+  return <h2>{title}</h2>;
 };
 
 const Author = () => {
@@ -92,7 +87,7 @@ const Author = () => {
     fontSize: "0.75rem",
     marginTop: "0.5rem",
   };
-  return <h4 style={inlineHeadingStyles}>David Flanagan</h4>;
+  return <h4>{author}</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
