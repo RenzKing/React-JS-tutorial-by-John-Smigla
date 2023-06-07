@@ -46,30 +46,29 @@ import "./index.css";
 // root.render(<Greeting />);
 
 const author = "David Flanagan";
-const title =
-  "JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language";
+const title = "JavaScript: The Definitive Guide";
 const img = "https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg";
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book job="developer" eat="code" />
+      <Book title="random title" number={29} />
     </section>
   );
 };
 
-const Book = () => {
+const Book = (props) => {
+  console.log(props);
   return (
-    <>
-      <article className="book">
-        <Image />
-        <Title />
-        <Author />
-      </article>
-    </>
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+      <p>{props.job}</p>
+      <p>{props.title}</p>
+      <p>{props.number}</p>
+    </article>
   );
 };
 
