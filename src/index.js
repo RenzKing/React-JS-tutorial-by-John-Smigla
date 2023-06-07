@@ -58,6 +58,19 @@ import "./index.css";
 //   );
 // };
 
+const books = [
+  {
+    author: "David Flanagan",
+    title: "Javascript",
+    img: "https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg",
+  },
+  {
+    author: "Renz",
+    title: "JS",
+    img: "https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg",
+  },
+];
+
 const Book = (props) => {
   const { img, title, author, children } = props;
   return (
@@ -69,6 +82,11 @@ const Book = (props) => {
   );
 };
 
+const names = ["john", "peter", "Susan"];
+const newNames = names.map((name) => {
+  console.log(name);
+  return <h1>{name}</h1>;
+});
 // const Image = () => {
 //   return <img src={img} alt={title}></img>;
 // };
@@ -86,36 +104,8 @@ const Book = (props) => {
 //   return <h4>{author}</h4>;
 // };
 
-const firstBook = {
-  author: "David Flanagan",
-  title: "Javascript",
-  img: "https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg",
-};
-
-const secondBook = {
-  author: "Renz",
-  title: "JS",
-  img: "https://m.media-amazon.com/images/I/913tvBe7OOL._AC_UY218_.jpg",
-};
-
 const BookList = () => {
-  return (
-    <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      >
-        <p>testing</p>
-        <button>CLick me</button>
-      </Book>
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
-    </section>
-  );
+  return <section className="booklist">{names}</section>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
