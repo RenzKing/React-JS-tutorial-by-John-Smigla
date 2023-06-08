@@ -71,17 +71,6 @@ const books = [
   },
 ];
 
-const Book = (props) => {
-  const { img, title, author, children } = props;
-  return (
-    <article className="book">
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
-    </article>
-  );
-};
-
 const names = ["john", "peter", "Susan"];
 const newNames = names.map((name) => {
   console.log(name);
@@ -103,18 +92,26 @@ const newNames = names.map((name) => {
 //   };
 //   return <h4>{author}</h4>;
 // };
-console.log(newNames);
+
 const BookList = () => {
   return (
     <section className="booklist">
-      {books.map(() => {
-        return (
-          <div>
-            <h2>Items</h2>
-          </div>
-        );
+      {books.map((book) => {
+        const { img, title, author } = book;
+        return <Book img={img} title={title} author={author} />;
       })}
     </section>
+  );
+};
+
+const Book = (props) => {
+  const { img, title, author } = props;
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
   );
 };
 
