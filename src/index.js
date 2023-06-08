@@ -103,9 +103,19 @@ const newNames = names.map((name) => {
 //   };
 //   return <h4>{author}</h4>;
 // };
-
+console.log(newNames);
 const BookList = () => {
-  return <section className="booklist">{names}</section>;
+  return (
+    <section className="booklist">
+      {books.map(() => {
+        return (
+          <div>
+            <h2>Items</h2>
+          </div>
+        );
+      })}
+    </section>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
